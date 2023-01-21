@@ -5,6 +5,7 @@ class ResumoController {
   static listarResumo = async (req, res) => {
     try {
       const { ano, mes} = req.params;
+      const url = 'https://orcamento.herokuapp.com' || "http://localhost:3000";
 
       const options = {
         headers: {
@@ -13,8 +14,8 @@ class ResumoController {
       };
 
       const [requestReceita, requestDespesa] = await Promise.all([
-        fetch(`/receitas/${ano}/${mes}`, options),
-        fetch(`/despesas/${ano}/${mes}`, options)
+        fetch(`${url}/receitas/${ano}/${mes}`, options),
+        fetch(`${url}/despesas/${ano}/${mes}`, options)
       ]);
 
       const receita = await requestReceita.json();

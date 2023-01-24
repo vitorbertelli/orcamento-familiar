@@ -2,6 +2,8 @@
 
 ## Sobre
 
+O objetivo do projeto foi desenvolver uma central que auxiliasse no controle fianaceiro. A aplicação se resume na criação de receitas e despesas, categorizadas conforme a necessidade. É possível também a visualização de um resumo mensal segundo os lucros e gastos listados na API.
+
 ## Getting Started
 
 ### Executar localmente
